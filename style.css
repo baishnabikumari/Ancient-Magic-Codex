@@ -154,3 +154,52 @@ body {
     padding: 2rem 1rem;
     font-size: 0.9rem;
 }
+
+.item-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Full background image so the image fits the size of the screen*/
+.full-image {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    animation: fadeIn 1s ease forwards;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* A png "Back" image as a back button down bottom left */
+.back-img-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 130px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    z-index: 10;
+}
+
+/* Add a hover pop + glow effect on back button */
+.back-img-btn:hover {
+    transform: scale(1.08);
+    filter: brightness(1.2) drop-shadow(0 0 10px #b993ff);
+}
+
+/* Smooth fade-in animation ig it's looking good!! */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
