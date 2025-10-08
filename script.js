@@ -30,7 +30,14 @@ if (document.getElementById("cardContainer")) {
     `;
     card.onclick = () => {
       localStorage.setItem("selectedItem", JSON.stringify(item));
-      window.location.href = "item.html";
+      if (item.name === "Lantern of Souls") {
+  window.location.href = "lantern.html";
+} else if (item.name === "Crystal of Serenity") {
+  window.location.href = "crystal.html";
+} else {
+  window.location.href = "item.html";
+}
+
     };
     container.appendChild(card);
   });
