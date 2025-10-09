@@ -16,8 +16,6 @@ const items = [
 ];
 
 if (document.getElementById("cardContainer")) {
-
-    //home page and cards.
   const container = document.getElementById("cardContainer");
   items.forEach((item, index) => {
     const card = document.createElement("div");
@@ -30,31 +28,25 @@ if (document.getElementById("cardContainer")) {
     `;
     card.onclick = () => {
       localStorage.setItem("selectedItem", JSON.stringify(item));
-      if (item.name === "Lantern of Souls") {
-  window.location.href = "lantern.html";
-} else if (item.name === "Crystal of Serenity") {
-  window.location.href = "crystal.html";
-} else {
-  window.location.href = "item.html";
-}
 
+// Here is the all the files where user will redirect to, when they click on the selected magic items.html
+      const nameToFile = {
+        "Lantern of Souls": "lantern.html",
+        "Crystal of Serenity": "crystal.html",
+        "Wand of Wisdom": "wand.html",
+        "Potion of Shadows": "potion.html",
+        "Sword of Flames": "sword.html",
+        "Cloak of Mist": "cloak.html",
+        "Orb of Echoes": "orb.html",
+        "Helm of Valor": "helm.html",
+        "Boots of Wind": "boots.html",
+        "Ring of Eternity": "ring.html",
+        "Staff of Storms": "staff.html",
+        "Amulet of Dawn": "amulet.html",
+      };
+
+      window.location.href = nameToFile[item.name] || "item.html";
     };
     container.appendChild(card);
   });
-}
-
-if (document.getElementById("itemDetails")) {
-
-    //magic items details page where you will see the written details of the magic items.
-  const item = JSON.parse(localStorage.getItem("selectedItem"));
-  if (item) {
-    const details = document.getElementById("itemDetails");
-    details.innerHTML = `
-      <img src="${item.img}" alt="${item.name}">
-      <h2 style="color:${item.color}">${item.name}</h2>
-      <p>${item.desc}</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra, sapien et gravida dapibus, eros justo aliquam nibh, nec sodales ligula nisl in massa. Donec ultricies leo a eros accumsan vehicula.</p>
-    `;
-    document.body.style.boxShadow = `inset 0 0 60px 10px ${item.color}`;
-  }
 }
