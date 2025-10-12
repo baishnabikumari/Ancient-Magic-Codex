@@ -11,6 +11,12 @@ It is entirely front-end: there is no authentication, no server, no frameworks, 
 
 When a user clicks on an Magic items, The user will see a seperate page for the magic items with all the details like rarity and powers and more.
 
+## Demo video and Screenshots !!
+<img width="1440" height="900" alt="Screenshot 2025-10-11 at 4 33 29 PM" src="https://github.com/user-attachments/assets/a5e9b2ad-a3b8-4169-b17b-44e378f54f81" />
+<img width="1440" height="900" alt="Screenshot 2025-10-11 at 4 33 33 PM" src="https://github.com/user-attachments/assets/dc5e6756-1509-42d8-872b-589dd42cb594" />
+
+https://github.com/user-attachments/assets/96c74920-9671-46a8-b612-40efcd7f0561
+
 ---
 
 ## Folder Structure
